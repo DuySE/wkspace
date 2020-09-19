@@ -11,7 +11,7 @@ mongoose.set('useCreateIndex', true);
 
 module.exports = {
   connect: function (cb) {
-    mongoose.connect(DATABASE_URI);
+    mongoose.connect('mongodb+srv://admin:admin@wkspace.itega.mongodb.net/wkspace?retryWrites=true&w=majority');
     const db = mongoose.connection;
     db.on('error', cb);
     db.once('open', () => {
